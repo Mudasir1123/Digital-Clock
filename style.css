@@ -70,7 +70,7 @@ font-weight: 500;
     color: rgb(254, 254, 254);
     position: absolute;
     display: inline-block;
-    transform: rotate(-90deg) translate(px, 90px);
+    transform:  translate(150px, 90px);
 
 }
 #secDots .dot {
@@ -79,11 +79,21 @@ font-weight: 500;
     width: 10px;
     height: 3px;
     background: var(--clr);
-    transform-origin: 100px;
+    transform-origin: center;
 }
 
 
 #secDots .active .dot{
     background: var(--clr);
-    box-shadow: 0 0 10px var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 20px var(--clr),
+    0 0 30px var(--clr);
+}
+
+#secDots .active .dot ~ .dot{
+    background: #555;
+}
+
+#secDots .dot:nth-child(5n + 5){
+    width: 20px;
 }
